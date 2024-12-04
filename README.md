@@ -2,9 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-
-## Step 1: Start the Metro Server
+## Step 1: Set up application
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
@@ -18,7 +16,7 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+## Step 2: Start Application
 
 Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
@@ -46,34 +44,35 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+## Decisions made
 
-Now that you have successfully run the app, let's modify it.
+### Atomic design pattern
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+It was implemented to group each app section giving the opportunity to:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- Have reusable components to allow us to maintain a consistent design throughout the application
+- Scale the design as it grows.
+- Reduce redundancy by developing smaller components.
+- Improve communication between design and development teams by using well-defined components.
 
-## Congratulations! :tada:
+### Context API
 
-You've successfully run and modified your React Native App. :partying_face:
+Native React feature to share data across components without passing props manually at every level. We achieve improved app performance by minimizing unnecessary re-renders by updating only the components that consume the context and allow us to reduce external dependencies implementation.
 
-### Now what?
+### AsyncStorage
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+External library to store stocks list provided in device's memory to guarantee offline performance.
 
-# Troubleshooting
+## Implemented tier of requirements
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- Sorting list by name ascending, descending, or setting original list order.
+- Filtering list by name and daily change stock properties.
+- Displaying details of each stock list item through a native modal.
 
-# Learn More
+Suggested timeframe was respected to develop this app. The app is presented without testing due to multiple errors encountered during configuration, and addressing these errors would not have allowed me to meet the assigned timeframe for submission.
 
-To learn more about React Native, take a look at the following resources:
+I really appretiate this opportunity you gave me to develop this application, and I hope you take into account the design patterns I implemented to give the best possible MVP.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+I would like to continue in this process in order to work with you guys. I am already crossing fingers to hear good news from you soon.
+
+Cheers!
